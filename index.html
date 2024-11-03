@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>Principal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="menu container">
+            <a href="" class="logo">Restaurante</a>
+            <input type="checkbox" id="Menu"/>
+            <label for="menu">
+                <img src="img/menu.png" class="menu-icono" alt="">
+            </label>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#reMenu">Menú</a></li>
+                    <li><a href="#foPedidos">Pedidos</a></li>
+                    <li><a href="#foReserva">Reserva</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-content container">
+            <img class="logo" src="img/Logo.png" alt="">
+        </div>
+    </header>
+
+    <section class="plato">
+        <div class="plato-content container">
+            <h2 class="tplato1">Platos</h2>
+            <h2 class="tplato2">más populares</h2>
+            <div class="plato-group">
+                <div class="palto-1">
+                    <img class="ceviche" src="img/ceviche.png" alt="">
+                    <h3>Ceviche</h3>
+                    <p>El cebiche, ceviche, sebiche o seviche es un plato 
+                        consistente en carne marinada ―pescado, mariscos o 
+                        ambos― en aliños cítricos, reconocido por la Unesco 
+                        como expresión de la cocina tradicional peruana y 
+                        patrimonio cultural inmaterial de la humanidad</p>
+                </div>
+    
+                <div class="palto-1">
+                    <img class="chicharon" src="img/chicharron.png" alt="">
+                    <h3>Chicharon</h3>
+                    <p>En Perú, la palabra “chicharrones” (plural de chicharrón) 
+                        se refiere a buñuelos elaborados con carne animal. Los más
+                        comunes son el pollo (chicharrones de pollo), el sándwich 
+                        de cerdo frito (pan con chicharrón) y el pescado (chicharrones 
+                        de pescado).</p>
+                </div>
+    
+                <div class="palto-1">
+                    <img class="combinado" src="img/combinado.png" alt="">
+                    <h3>Combinado</h3>
+                    <p>En Perú, el combinado es una comida que reúne varios potajes 
+                        en un solo platillo. Este nace gracias a la creatividad de 
+                        los cocineros, ya que en zonas populares, como el paladar es 
+                        exigente y un solo platillo no suele llenar el estómago de 
+                        algunos, se le agrega otros alimentos más.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="form-1" id="reMenu">
+        <div class="container">
+            <div class="row">
+                <h1>Registro del menú</h1>
+                <div class="description">
+                    <p>"Bienvenido al sistema de registro de menú. Aquí puedes agregar de manera rápida y sencilla nuevos platos al menú ingresando el nombre del plato, una breve descripción y su precio. Haz clic en el botón 'Agregar' para guardar la información y actualizar la lista de platos registrada en la tabla inferior.</p>
+                </div>
+                <form id="menuForm">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="categoria" placeholder="Categoria" required>
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="nombreMenu" placeholder="Nombre del plato" required>
+                </div>
+                <div class="mb-3">
+                    <input type="number" class="form-control" id="precioMenu" placeholder="Precio" required>
+                </div>
+                <div class="mb-3">
+                    <input type="number" class="form-control" id="stock" placeholder="Stock" required>
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="descripcionMenu" placeholder="Descripcion" required>
+                </div>
+                <div class="mb-3">
+                    <button class="btn" type="submit">Agregar</button>
+                </div>
+                </form>
+                <table id="menuTable">
+                    <thead>
+                        <tr>
+                            <th> ID </th>
+                            <th> Categoria </th>
+                            <th> Nombre </th>
+                            <th> Precio </th>
+                            <th> Stock </th>
+                            <th> Descripcion </th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+         <!-- ============================= -->
+         <!-- Modal para registro de platos -->
+         <div id="editMenu" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Editar plato</h2>
+                <form id="editFormMenu">
+                    <div class="mb-3">
+                        <input type="hidden" id="editIdMenu">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="editcategoriaMenu" placeholder="Categoria" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="editNameMenu" placeholder="Nombre del plato" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="number" class="form-control" id="editPreMenu" placeholder="Precio" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="number" class="form-control" id="editstockMenu" placeholder="Stock" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="editDesMenu" placeholder="Descripcion" required>
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn" type="submit">Guardar cambios</button>
+                    </div>
+                    </form>
+
+            </div>
+         </div>
+        <script src="../controller/menu.js"></script>
+    </section>
+
+    <section class="form-1" id="foPedidos">
+        <div class="container">
+            <div class="column-pedidos">
+                <h1>Pedidos</h1>
+                <div class="description">
+                    <p>"Bienvenido al sistema de registro de pedidos. Aquí puedes añadir nuevos pedidos ingresando el nombre del cliente, una descripción del pedido, la fecha (dd/mm/aaaa) y el precio total. Una vez completada la información, haz clic en 'Agregar Pedido' para guardar y actualizar la lista de pedidos en la tabla inferior."
+                    </p>
+                    </div>
+                <form id="pedidoForm">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="nombrePedido" placeholder="Nombre del cliente" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="number" class="form-control" id="cantidadPersonas" placeholder="Cantidad de Personas" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="menu" placeholder="Plato a selección" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="estadoOrden" placeholder="Estado de Orden" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="date" class="form-control" id="fecha" placeholder="Fecha" required>
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn" type="submit">Agregar Pedido</button>
+                    </div>
+                </form>
+    
+                <table id="pedidoTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre del Cliente</th>
+                            <th>Qty de Personas</th>
+                            <th>Menú</th>
+                            <th>Estado de Orden</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        
+         <!-- ============================= -->
+         <!-- Modal para Pedidos -->
+         <div id="editPedido" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Editar Pedidos</h2>
+                <form id="editFormPe">
+                    <div class="mb-3">
+                        <input type="hidden" id="editIdPe">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" id="editNamePe" placeholder="Nombre del cliente" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="number" class="form-control" id="editcantidadPersonas" placeholder="Cantidad de Personas" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" id="editMePe" placeholder="Plato seleccionado" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" id="editEstaPe" placeholder="Estado de Orden" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="date" id="editDatePe" placeholder="Fecha" required>
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn" type="submit">Guardar cambios</button>
+                    </div>
+                </form>
+    
+            </div>
+        </div>
+
+        <script src="../controller/pedido.js"></script>
+    </section>
+
+    <section class="form-1" id="foReserva">
+        <div class="container">
+            <div class="row">
+                <h1>Reserva</h1>
+                <div class="description">
+                    <p>
+                        "Bienvenido al sistema de registro de reservas. Completa los datos necesarios para registrar una nueva reserva, incluyendo el nombre del cliente, su correo electrónico, la fecha (dd/mm/aaaa) y la hora (--:--). Una vez ingresada la información, haz clic en 'Agregar reserva' para guardar los datos y actualizarlos en la lista de reservas en la tabla inferior.""
+                    </p>
+                </div>
+                <form id="reservaForm">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="nombreCliente" placeholder="Nombre del cliente" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="cantidadPersonas" placeholder="Cantidad de Personas" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="number" class="form-control" id="preOrden" placeholder="Pre-orden" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="date" class="form-control" id="fecha" placeholder="Fecha" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="estadoReserva" placeholder="Estado de Orden" required>
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn" type="submit">Agregar Pedido</button>
+                    </div>
+                </form>
+    
+                <table id="reservaTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Qty de Personas</th>
+                            <th>Pre-orden</th>
+                            <th>Dato</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            
+         <!-- ============================= -->
+         <!-- Modal para Reserva -->
+         <div id="editReserva" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Editar reserva</h2>
+                <form id="editFormRe">
+                    <div class="mb-3">
+                        <input type="hidden" class="form-control" id="ediiIdRe">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="editNameRe" placeholder="Nombre del cliente" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="number" class="form-control" id="editqty" placeholder="Cantidad de personas" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="number" class="form-control" id="editPreOrden" placeholder="Pre-orden" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="date" class="form-control" id="editDateRe" placeholder="Fecha" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="editEstaRe" placeholder="Estado de Orden" required>
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn" type="submit">Guardar cambios</button>
+                    </div>
+                </form>
+            </div>
+         </div>
+    
+        <script src="../controller/reserva.js"></script>
+    </section>
+
+    <footer class="footer">
+        <p>Me falta terminarlo</p>
+    </footer>
+
+</body>
+</html>

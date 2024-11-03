@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="login.css">
+    <title>login</title>
+</head>
+<body>
+    <div class="login"> 
+        <form action="">
+            <h1>Login</h1>
+            <div class="logo-login">
+                <img src="img/Logo.png" alt="logoRestauranteChristian">
+            </div>
+            <div class="description">
+                <p>Bienvenido al sistema de inicio de sesión del Restaurante Christian. Por favor, ingresa tus credenciales para acceder.</p>
+            </div>
+            <div class="box-text">
+                <input id="username" type="text" placeholder="Username" required>
+                <i class='bx bxs-user' ></i>
+            </div>
+            <div class="box-text">
+                <input id="password" type="text" placeholder="Password" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <div class="forgot-password">
+                <a href=#>Has olvidado tu contraseña</a>
+            </div>
+            <button type="submit" class="btn" onclick="redireccion()">Iniciar Sesion</button>
+            <div class="register-form">
+                <p>¿No tienes una cuenta? <a href="#">Registrate</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

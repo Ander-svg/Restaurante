@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.color{
+    color: #F2F2F2;
+    color: #BF7575;
+    color: #A63C3C;
+    color: #8C1B1B;
+    color: #262223;
+}
+.form-3 h1{
+    font-family: "Poppins";
+}
+
+.form-2 h1{
+    font-family: "Poppins";
+}
+
+.form-1 h1{
+    font-family: "Courgette";
+    padding: 20px;
+}
+
+.menu a{
+    font-family: "Courgette", cursive;
+}
+
+.plato-content h3{
+    font-family: "Courgette", cursive;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header{
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+    background-color:#F2F2F2 ;
+}
+
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.header-content .logo{
+    display: block;
+    margin: auto;
+    width: 300px;
+    height: 200px;
+}
+
+.header-content .logo{
+    position: relative;
+    width: 440px;
+    height: 300px;
+}
+
+.logo{
+    color:#8C1B1B ;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.menu .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a{
+    font-size: 20px;
+    padding: 20px;
+    color: #8C1B1B;
+    display: block;
+    font-weight: 500;
+}
+
+.menu .navbar ul li a:hover{
+    color: #BF7575;
+}
+
+#Menu{
+    display: none;
+}
+
+.menu-icono{
+    width: 25px;
+}
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+
+.plato{
+    padding: 100px;
+    background-color:#A63C3C ;
+    position: relative;
+}
+
+.plato-content .tplato2{
+    margin: 0 0 1em;
+}
+
+.plato-content{
+    text-align: 55px;
+}
+
+.plato-content h2{
+    font-size: 100px;
+    line-height: 70px;
+    color: #262223;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.plato-content h3{
+    font-size: 28px;
+    line-height: 70px;
+    color: #262223;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.txt-p{
+    font-size: 16px;
+    color: #262223;
+    padding: 0 250px ;
+    margin-bottom: 35px;
+}
+
+.plato-group{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.plato-1{
+    padding: 0 25px;;
+}
+
+.plato-1 img{
+    width: 0px;
+}
+
+.palto.img{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.plato-content p {
+    font-size: 16px; 
+    line-height: 1.5; /* Espaciado entre líneas */
+    text-align: center;
+    margin-top: 20px;
+    margin: 15px;
+    color: #262223;
+}
+
+.ceviche {
+    width: 400px;
+    height: auto;
+}
+
+.chicharon {
+    width: 400px;
+    height: auto; 
+}
+
+.combinado{
+    width: 400px;
+    height: auto;
+}
+
+footer{
+    background-position: center bottom;
+    background-size: cover;
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #262223;
+    padding: 100px;
+}
+
+/* ======================== */
+/* Formulario registro menu */
+
+.form-1 {
+    background-position: center bottom;
+    background-size: cover;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #BF7575;
+    padding: 100px;
+}
+
+.form-1 .imMenu {
+    position: relative;
+    display: flex;
+    margin: auto;
+}
+
+.form-1 .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #F2F2F2;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(0, 0, 1);
+    height: 700px;
+    width: 800px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-1 .mb-3 {
+    position: relative;
+    width: 400px;
+    height: 50px;
+    margin: 4px auto auto auto;
+    display: flex;
+}
+
+.mb-3 input {
+    width: 90%;
+    height: 90%;
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 40px;
+    padding: 20px 45px 20px 20px;
+}
+
+.mb-3 input::placeholder {
+    color: black;
+}
+
+.form-1 .btn {
+    width: 90%;
+    height: 40px;
+    background: #A63C3C;
+    border: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgb(0, 0, 1);
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    font-weight: 600;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 28px;
+    font-weight: 900;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.fromPe {
+    display: block;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.description {
+    text-align: center;
+    margin: 20px 45px;
+    color: #333; 
+    font-size: 13px; 
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#editForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#editForm input {
+    margin-bottom: 10px;
+}
+
+/*======================*/
+/*Formlario para pedidos*/
+
