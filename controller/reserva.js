@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const estadoReserva = document.getElementById('estadoReserva').value;
 
         // Función para agregar la reserva (puedes adaptarla según tu lógica)
-        addReserva({ nombreCliente, cantidadPersonas, preOrden, estadoReserva, fecha });
+        addReserva({ nombreCliente, cantidadPersonas, preOrden, fecha, estadoReserva  });
 
         
     });
@@ -62,24 +62,26 @@ document.addEventListener('DOMContentLoaded', () => {
         const row = table.insertRow();
         row.innerHTML = `
             <td>${reserva.idReserva}</td>
-            <td>${reserva.nombreReserva}</td>
-            <td>${reserva.emailReserva}</td>
-            <td>${reserva.fechaReserva}</td>
-            <td>${reserva.horaReserva}</td>
+            <td>${reserva.nombreCliente}</td>
+            <td>${reserva.cantidadPersonas}</td>
+            <td>${reserva.preOrden}</td>
+            <td>${reserva.fecha}</td>
+            <td>${reserva.estadoReserva}</td>
             <td>
-                <button onclick="editReserva(${reserva.idReserva}, '${reserva.nombreReserva}', '${reserva.emailReserva}','${reserva.fechaReserva}','${reserva.horaReserva}')">Editar</button>
+                <button onclick="editReserva(${reserva.idReserva}, '${reserva.nombreCliente}', '${reserva.cantidadPersonas}','${reserva.preOrden}','${reserva.fecha}','${reserva.estadoReserva}')">Editar</button>
                 <button onclick="deleteReserva(${reserva.idReserva}, this)">Eliminar</button>
             </td>
         `;
     }
 
     // Editar reserva
-    window.editReserva = function(idReserva, nombreReserva, emailReserva, fechaReserva, horaReserva) {
+    window.editReserva = function(idReserva, nombreCliente, cantidadPersonas, preOrden, fecha, estadoReserva) {
         document.getElementById('editIdRe').value = idReserva;
-        document.getElementById('editNameRe').value = nombreReserva;
-        document.getElementById('editEmailRe').value = emailReserva;
-        document.getElementById('editDateRe').value = fechaReserva;
-        document.getElementById('editTimeRe').value = horaReserva;
+        document.getElementById('editNameRe').value = nombreCliente;
+        document.getElementById('editqty').value = cantidadPersonas;
+        document.getElementById('editPreOrden').value = preOrden;
+        document.getElementById('editDateRe').value = fecha;
+        document.getElementById('editEstaRe').value = estadoReserva;
         modal.style.display = 'block';
     }
 
@@ -98,13 +100,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Manejar envío del formulario de edición
     editForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        const idReserva = document.getElementById('editIdRe').value;
-        const nombreReserva = document.getElementById('editNameRe').value;
-        const emailReserva = document.getElementById('editEmailRe').value;
-        const fechaReserva = document.getElementById('editDateRe').value;
-        const horaReserva = document.getElementById('editTimeRe').value;
 
-        updateReserva(idReserva, { nombreReserva, emailReserva, fechaReserva, horaReserva });
+        const idReserva = document.getElementById('editIdRe').value;
+        const nombreCliente = document.getElementById('editNameRe').value;
+        const cantidadPersonas = document.getElementById('editqty').value;
+        const preOrden = document.getElementById('editPreOrden').value; 
+        const fecha = document.getElementById('editDateRe').value;
+        const estadoReserva = document.getElementById('editEstaRe').value;
+
+        updateReserva(idReserva, { nombreCliente, cantidadPersonas, preOrden, fecha, estadoReserva });
     });
 
     // Actualizar reserva
@@ -114,17 +118,18 @@ document.addEventListener('DOMContentLoaded', () => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(student),
+            body: JSON.stringify(reserva),
         })
         .then(response => response.json())
         .then(updatedReserva => {
             const rows = table.getElementsByTagName('tr');
             for (let i = 0; i < rows.length; i++) {
                 if (rows[i].cells[0].textContent == idReserva) {
-                    rows[i].cells[1].textContent = updatedReserva.nombreReserva;
-                    rows[i].cells[2].textContent = updatedReserva.emailReserva;
-                    rows[i].cells[3].textContent = updatedReserva.fechaReserva;
-                    rows[i].cells[4].textContent = updatedReserva.horaReserva;
+                    rows[i].cells[1].textContent = updatedReserva.nombreCliente;
+                    rows[i].cells[2].textContent = updatedReserva.cantidadPersonas;
+                    rows[i].cells[3].textContent = updatedReserva.preOrden;
+                    rows[i].cells[4].textContent = updatedReserva.fecha;
+                    rows[i].cells[5].textContent = updatedReserva.estadoReserva;
                     rows[i].style.backgroundColor = '#FFFF99';  // Resaltar la fila actualizada
                     setTimeout(() => {
                         rows[i].style.backgroundColor = '';  // Volver al color normal después de 1 segundo

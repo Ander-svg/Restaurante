@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Editar menu
-    window.editMenu = function(menuId, nombreMenu, descripcionMenu, precioMenu, stock) {
+    window.editMenu = function(menuId, categoria, nombreMenu, descripcionMenu, precioMenu, stock) {
         document.getElementById('editIdMenu').value = menuId;
         document.getElementById('editcategoriaMenu').value = categoria;
         document.getElementById('editNameMenu').value = nombreMenu;
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const stock = document.getElementById('editstockMenu').value;
         const descripcionMenu = document.getElementById('editDesMenu').value;
 
-        updateMenu(menuId, { categoria, nombreMenu, descripcionMenu, precioMenu, stock });
+        updateMenu(menuId, { categoria, nombreMenu, precioMenu, stock, descripcionMenu});
     });
 
     // Actualizar menu
@@ -127,9 +127,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (rows[i].cells[0].textContent == menuId) {
                     rows[i].cells[1].textContent = updatedMenu.categoria;
                     rows[i].cells[2].textContent = updatedMenu.nombreMenu;
-                    rows[i].cells[3].textContent = updatedMenu.descripcionMenu;
-                    rows[i].cells[4].textContent = updatedMenu.precioMenu;
-                    rows[i].cells[5].textContent = updatedMenu.stock;
+                    rows[i].cells[3].textContent = updatedMenu.precioMenu;
+                    rows[i].cells[4].textContent = updatedMenu.stock;
+                    rows[i].cells[5].textContent = updatedMenu.descripcionMenu;
                     
                     rows[i].style.backgroundColor = '#FFFF99';  // Resaltar la fila actualizada
                     setTimeout(() => {

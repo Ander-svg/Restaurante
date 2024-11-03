@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Función para agregar el pedido (puedes adaptarla según tu lógica)
         addPedido({ nombrePedido, cantidadPersonas, menuSeleccionado, estadoOrden, fecha });
 
-
     });
 
     // Cargar pedido
