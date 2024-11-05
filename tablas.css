@@ -1,35 +1,57 @@
-    *{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;}
+    box-sizing: border-box;
+}
 
-    .form-1{
-        min-width: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+body {
+    background-color: #f0f0f0; 
+}
 
-    .main{
-        width: 32vw;
-        height: auto;
-        background-color: #fff5;
-        backdrop-filter: blur(7px);
-        box-shadow: 0 .4rem .8rem #0005;
+.form-1 {
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    width: 90%; 
+    max-width: 600px;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(7px);
+    box-shadow: 0 .4rem .8rem rgba(0, 0, 0, 0.05); 
+    border-radius: 0.6rem;
+    padding: 1rem; 
+}
+
+.main-menu {
+    width: 100%; 
+    max-height: calc(89vh - 1.6rem);
+    background-color: rgba(255, 251, 255, 0.95);
+    margin: 0.8rem auto;
+    border-radius: 0.6rem;
+    overflow: auto;
+}
+
+.table, th, td {
+    padding: 1rem;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid rgba(0, 0, 0, 0.1); 
+}
+
+@media (max-width: 768px) {
+    .main {
+        width: 95%; 
+        padding: 0.5rem; 
     }
     
-    .main-menu{
-        width: 95%;
-        max-height: calc(89% - .8rem);
-        background-color: #fffb;
-        margin: .8rem auto;
-        border-radius:  .6rem;
-        overflow: auto;
-    }
-
     .table, th, td {
-        padding: 1rem;
+        font-size: 0.9rem; 
     }
-
-
-
+}

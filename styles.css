@@ -1,36 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
 
-.color{
+.color {
     color: #F2F2F2;
-    color: #BF7575;
-    color: #A63C3C;
-    color: #8C1B1B;
-    color: #262223;
 }
-.form-3 h1{
+
+.form-3 h1,
+.form-2 h1 {
     font-family: "Poppins";
 }
 
-.form-2 h1{
-    font-family: "Poppins";
-}
-
-.form-1 h1{
+.form-1 h1 {
     font-family: "Courgette";
     padding: 20px;
 }
 
-.menu a{
+.menu a {
     font-family: "Courgette", cursive;
 }
 
-.plato-content h3{
+.plato-content h3 {
     font-family: "Courgette", cursive;
 }
 
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -38,26 +31,34 @@
     list-style: none;
 }
 
-body{
+body {
     font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
 }
-
-.container{
+.container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
 }
 
-.header{
+.header {
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 40vh;
     display: flex;
     align-items: center;
-    background-color:#F2F2F2 ;
+    background-color: #F2F2F2;
 }
 
-.menu{
+.menu {
     position: fixed;
     top: 0;
     left: 0;
@@ -68,31 +69,22 @@ body{
     z-index: 1000;
 }
 
-.header-content .logo{
-    display: block;
-    margin: auto;
+.header-content .logo {
     width: 300px;
-    height: 200px;
+    height: auto;
 }
 
-.header-content .logo{
-    position: relative;
-    width: 440px;
-    height: 300px;
-}
-
-.logo{
-    color:#8C1B1B ;
+.logo {
+    color: #8C1B1B;
     font-size: 25px;
     font-weight: 800;
 }
 
-.menu .navbar ul li{
-    position: relative;
+.menu .navbar ul li {
     float: left;
 }
 
-.menu .navbar ul li a{
+.menu .navbar ul li a {
     font-size: 20px;
     padding: 20px;
     color: #8C1B1B;
@@ -100,106 +92,82 @@ body{
     font-weight: 500;
 }
 
-.menu .navbar ul li a:hover{
+.menu .navbar ul li a:hover {
     color: #BF7575;
 }
 
-#Menu{
-    display: none;
-}
-
-.menu-icono{
+.menu-icono {
     width: 25px;
 }
 
-.menu label{
+.menu label {
     cursor: pointer;
     display: none;
 }
 
-.plato{
+.plato {
     padding: 100px;
-    background-color:#A63C3C ;
-    position: relative;
+    background-color: #A63C3C;
 }
 
-.plato-content .tplato2{
-    margin: 0 0 1em;
+.plato-content {
+    text-align: center;
 }
 
-.plato-content{
-    text-align: 55px;
-}
-
-.plato-content h2{
+.plato-content h2 {
     font-size: 100px;
     line-height: 70px;
     color: #262223;
     text-transform: uppercase;
     margin-bottom: 15px;
-    text-align: center;
 }
 
-.plato-content h3{
+.plato-content h3 {
     font-size: 28px;
     line-height: 70px;
     color: #262223;
     margin-bottom: 15px;
-    text-align: center;
 }
 
-.txt-p{
+.txt-p {
     font-size: 16px;
     color: #262223;
-    padding: 0 250px ;
+    padding: 0 20px;
     margin-bottom: 35px;
 }
 
-.plato-group{
+.plato-group {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 50px;
 }
 
-.plato-1{
-    padding: 0 25px;;
+.plato-1 {
+    flex: 1 1 calc(33.33% - 20px);
+    margin: 10px;
 }
 
-.plato-1 img{
-    width: 0px;
-}
-
-.palto.img{
-    position: absolute;
-    top: 0;
-    right: 0;
+.plato-1 img {
+    width: 100%;
+    height: auto;
 }
 
 .plato-content p {
-    font-size: 16px; 
-    line-height: 1.5; /* Espaciado entre líneas */
+    font-size: 16px;
+    line-height: 1.5;
     text-align: center;
-    margin-top: 20px;
-    margin: 15px;
+    margin: 15px 0;
     color: #262223;
 }
 
-.ceviche {
-    width: 400px;
+.ceviche, .chicharon, .combinado {
+    width: 100%;
+    max-width: 400px;
     height: auto;
 }
 
-.chicharon {
-    width: 400px;
-    height: auto; 
-}
-
-.combinado{
-    width: 400px;
-    height: auto;
-}
-
-footer{
+footer {
     background-position: center bottom;
     background-size: cover;
     min-height: 20vh;
@@ -207,11 +175,8 @@ footer{
     align-items: center;
     justify-content: center;
     background-color: #262223;
-    padding: 100px;
+    padding: 100px 20px;
 }
-
-/* ======================== */
-/* Formulario registro menu */
 
 .form-1 {
     background-position: center bottom;
@@ -221,13 +186,7 @@ footer{
     align-items: center;
     justify-content: center;
     background-color: #BF7575;
-    padding: 100px;
-}
-
-.form-1 .imMenu {
-    position: relative;
-    display: flex;
-    margin: auto;
+    padding: 100px 20px;
 }
 
 .form-1 .container {
@@ -237,24 +196,17 @@ footer{
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 0 10px rgb(0, 0, 1);
-    height: 700px;
-    width: 800px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
 }
 
-.form-1 .mb-3 {
+.mb-3 {
     position: relative;
-    width: 400px;
-    height: 50px;
-    margin: 4px auto auto auto;
-    display: flex;
+    width: 100%;
+    margin: 4px auto;
 }
 
 .mb-3 input {
     width: 90%;
-    height: 90%;
+    height: 50px;
     background: transparent;
     border: 2px solid black;
     border-radius: 40px;
@@ -291,11 +243,6 @@ form {
     margin-bottom: 20px;
 }
 
-.fromPe {
-    display: block;
-    margin-bottom: 20px;
-}
-
 table {
     width: 100%;
     border-collapse: collapse;
@@ -314,11 +261,10 @@ th {
 .description {
     text-align: center;
     margin: 20px 45px;
-    color: #333; 
-    font-size: 13px; 
+    color: #333;
+    font-size: 13px;
 }
 
-/* Estilos para el modal */
 .modal {
     display: none;
     position: fixed;
@@ -364,6 +310,68 @@ th {
     margin-bottom: 10px;
 }
 
-/*======================*/
-/*Formlario para pedidos*/
+.footer {
+    background-color: #333333;
+    color: #f1f1f1;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+}
 
+.footer .container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer a {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .menu .navbar ul li {
+        float: none;
+        width: 100%;
+    }
+    
+    .header-content .logo {
+        width: 80%;
+    }
+
+    .plato-content h2 {
+        font-size: 50px;
+    }
+
+    .plato-content h3 {
+        font-size: 24px;
+    }
+
+    .txt-p {
+        padding: 0 20px;
+    }
+
+    .plato {
+        padding: 50px;
+    }
+
+    .form-1 .container {
+        padding: 20px;
+        width: 100%;
+        height: auto;
+    }
+    
+    .plato-1 {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin: 10px 0;
+    }
+}
