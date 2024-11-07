@@ -11,7 +11,6 @@
     <header class="header">
         <div class="menu container">
             <a href="" class="logo">Restaurante</a>
-            <input type="checkbox" id="Menu"/>
             <label for="menu">
                 <img src="img/menu.png" class="menu-icono" alt="">
             </label>
@@ -33,7 +32,7 @@
             <h2 class="tplato1">Platos</h2>
             <h2 class="tplato2">más populares</h2>
             <div class="plato-group">
-                <div class="palto-1">
+                <div class="plato-1">
                     <img class="ceviche" src="img/ceviche.png" alt="">
                     <h3>Ceviche</h3>
                     <p>El cebiche, ceviche, sebiche o seviche es un plato 
@@ -43,7 +42,7 @@
                         patrimonio cultural inmaterial de la humanidad</p>
                 </div>
     
-                <div class="palto-1">
+                <div class="plato-1">
                     <img class="chicharon" src="img/chicharron.png" alt="">
                     <h3>Chicharon</h3>
                     <p>En Perú, la palabra “chicharrones” (plural de chicharrón) 
@@ -53,7 +52,7 @@
                         de pescado).</p>
                 </div>
     
-                <div class="palto-1">
+                <div class="plato-1">
                     <img class="combinado" src="img/combinado.png" alt="">
                     <h3>Combinado</h3>
                     <p>En Perú, el combinado es una comida que reúne varios potajes 
@@ -108,8 +107,6 @@
                 </table>
             </div>
 
-         <!-- ============================= -->
-         <!-- Modal para registro de platos -->
          <div id="editMenu" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
@@ -187,8 +184,6 @@
                 </table>
             </div>
         
-         <!-- ============================= -->
-         <!-- Modal para Pedidos -->
          <div id="editPedido" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
@@ -260,7 +255,7 @@
                             <th>Nombre</th>
                             <th>Qty de Personas</th>
                             <th>Pre-orden</th>
-                            <th>Date</th>
+                            <th>Dato</th>
                             <th>Estado</th>
                         </tr>
                     </thead>
@@ -268,15 +263,13 @@
                 </table>
             </div>
             
-         <!-- ============================= -->
-         <!-- Modal para Reserva -->
          <div id="editReserva" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
                 <h2>Editar reserva</h2>
                 <form id="editFormRe">
                     <div class="mb-3">
-                        <input type="hidden" class="form-control" id="editIdRe">
+                        <input type="hidden" class="form-control" id="ediiIdRe">
                     </div>
                     <div class="mb-3">
                         <input type="text" class="form-control" id="editNameRe" placeholder="Nombre del cliente" required>
@@ -300,7 +293,7 @@
             </div>
          </div>
     
-        <script src="../REST/controller/reserva.js"></script>
+        <script src="controller/pedido.js"></script>
     </section>
 
     <footer class="footer">
@@ -309,6 +302,5 @@
             <p>Dirección: Av. Nikola Testa 9, Calle 3 | Tel: 912 345 367</p>
         </div>
     </footer>
-
 </body>
 </html>
